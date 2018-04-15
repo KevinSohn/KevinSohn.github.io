@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <button onclick="sayHello()">Say hello</button>
+    <button onclick="addOne()">Add One</button>
+    <button onclick="subOne()">Subtract One</button>
+    <script>
+        document.getElementById('demo').innerHTML = "Paragraph changed.";
+
+        function sayHello() {
+            document.getElementById('demo').innerHTML = "Hello ";
+        }
+        var count = 0;
+
+        function addOne(){
+            count++;
+            document.getElementById('demo').innerHTML = count;
+        }
+        function subOne(){
+            count-=1;
+            document.getElementById('demo').innerHTML = count;
+        }
+    </script>
+</body>
+</html>
