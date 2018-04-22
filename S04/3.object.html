@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // object has properties and methods
+
+        var myCar = {
+            name: "Civic",
+            maker: "Honda",
+            color: "white",
+            wheels: "Four",
+            weight: "3,010",
+            cost: "18,840",
+            MPG: "42"
+        };
+
+        //create an object called person that contains 
+        var person = {
+            firstName: "Kevin",
+            lastName: "Sohn",
+            numberOfVowelsInName: "3",
+            getFullName: function (){
+                return this.firstName + " " + this.lastName;
+            }
+        };
+
+        //log out all the properties
+        console.log(person.firstName); // you could also do console.log(person["firstName"])
+        console.log(person["lastName"]);
+        console.log(person["numberOfVowelsInName"]);
+        console.log(person.getFullName())
+    </script>
+</body>
+</html>

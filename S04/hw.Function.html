@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo">Display the result here</p>
+    <button onclick="myFunction(person.firstName, person.lastName)">Welcome</button>
+
+    <script>
+    var person = {firstName: "John", lastName: "Doe"};
+    function myFunction(name, lastname){
+        document.getElementById("demo").innerHTML = "Welcome," + " " + name + " " + lastname + "."
+    }
+    </script>
+</body>
+</html>
