@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <label for="firstBtn">first</label>
+    <input id = "firstBtn" type="text"> <br>
+    <label for="secondBtn">second</label>
+    <input id = "secondBtn" type="text"><br>
+    <button id = "btnThingy">Check</button>
+    <p id = "demo"></p>
+
+    <script>
+    function displaySum(){
+        var sum = 
+        parseInt(document.querySelector("#firstBtn").value) + 
+        parseInt(document.querySelector("#secondBtn").value);
+        document.querySelector("#demo").innerHTML = "Sum is " + sum;
+    }
+    
+    var btnThingy = document.querySelector("#btnThingy");
+    btnThingy.addEventListener('click', displaySum);
+    </script>
+</body>
+</html>

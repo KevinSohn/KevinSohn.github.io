@@ -7,8 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    <p>Java is fun</p>
-    <p id = "lol" style = "display:none">Java is confusing</p>
-    <button onclick = "document.getElementById('lol').style.display='block'">Clickbait</button>
+    <p id = "demo"></p>
+
+    <script>
+    var x, y, z;
+    x = 10;
+    y = 1;
+    z = x + y;
+    document.getElementById("demo").innerHTML = "The value of z is " + z + ".";
+    </script>
 </body>
 </html>

@@ -7,8 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <p>Java is fun</p>
-    <p id = "lol" style = "display:none">Java is confusing</p>
-    <button onclick = "document.getElementById('lol').style.display='block'">Clickbait</button>
+    <p id = "demo">Display result here</p>
+
+    <script>
+    var person = {name:"John", age:50};
+    document.getElementById("demo").innerHTML = person.name + " is " + person.age + " years old.";
+    </script>
 </body>
 </html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Number Guessing Game</h1>
+    <h2>We have selected a number between 1 and 10</h2>
+    <h2>See if you can get it</h2>
+    <label for="guess">Enter a Guess</label><br>
+    <input id = "guess" type="text">
+    <button id = "btn">check</button>
+    <p id = "previous"></p>
+    <p id = "demo"></p>
+    <p id = "counter">0</p>    
+    <button id = "reset">reset</button>
+
+    <script>
+    var number = Math.floor(Math.random() * 10 + 1);
+    function display(){
+        var input = parseInt(document.querySelector("#guess").value);
+        document.querySelector("#previous").innerHTML += " " + input;
+    }
+    function counter(){
+        document.querySelector("#counter").innerHTML = parseInt(document.querySelector("#counter").innerHTML) + 1;
+        if (parseInt(document.querySelector("#counter").innerHTML) >= 5){
+            document.querySelector("#demo").innerHTML = "You lost."
+            reset();
+        }
+    }
+    function UserInput(){
+        var input = parseInt(document.querySelector("#guess").value);
+        if(input == number){
+            document.querySelector("#demo").innerHTML = "Right";
+        }
+        else{
+            if(input>number){
+                document.querySelector("#demo").innerHTML = "Too High"
+            }
+            else{
+                document.querySelector("#demo").innerHTML = "Too Low"
+            }
+        }
+    }
+    function reset(){
+        document.querySelector("#demo").innerHTML = "";
+        document.querySelector("#previous").innerHTML = "";
+        document.querySelector("#counter").innerHTML = "";
+        number = Math.floor(Math.random() * 10 + 1);
+    }
+    var btn = document.querySelector("#btn");
+    var btn2 = document.querySelector("#reset");
+    btn.addEventListener('click', UserInput);
+    btn.addEventListener('click', display);
+    btn.addEventListener('click', counter);
+    btn2.addEventListener("click", reset);
+    </script>
+</body>
+</html>

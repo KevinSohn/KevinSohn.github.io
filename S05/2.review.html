@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id = "demo"></p>
+    <button onclick = "myFunction()">Clickbait</button>
+     <!-- another way to do it -->
+    <button id= "btnMyButton">Clickbait</button>
+    <script>
+    function myFunction(){
+        document.getElementById("demo").innerHTML = "Welcome to the planet in the solar system that is believed to be the only one that can sustain life in the entirety of the universe, which in some reasons might not be very possible as there is a theory that the univese is forever expanding and increasing in size, meaning that it goes through an infinite amount of permutations in which the planets and other celestial bodies are created, therefore allowing one to assume that at least more than one of those infinite permutations can sustain life rather than Earth being the only one that can do so.";
+    }
+    var btn = document.querySelector("#btnMyButton");
+    btn.addEventListener('click', myFunction);
+    </script>
+</body>
+</html>
